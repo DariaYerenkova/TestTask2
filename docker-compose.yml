@@ -1,17 +1,17 @@
 services: 
-  shopifyweb:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8083:8080"  
-    depends_on:
-      - sqlserver
-    env_file:
-      - .env
-    environment:
-      - ConnectionStrings__DatabaseConnectionString=${ConnectionStrings__DatabaseConnectionString};
-      - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
+  # shopifyweb:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8083:8080"  
+  #   depends_on:
+  #     - sqlserver
+  #   env_file:
+  #     - .env
+  #   environment:
+  #     - ConnectionStrings__DatabaseConnectionString=${ConnectionStrings__DatabaseConnectionString};
+  #     - ASPNETCORE_ENVIRONMENT=${ASPNETCORE_ENVIRONMENT}
 
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
